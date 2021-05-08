@@ -5,6 +5,7 @@
   "tabWidth": 2,
   "arrowParens": "avoid",
   "jsxBracketSameLine": true,
+  "jsxSingleQuote": false,
   "requirePragma": false,
   "useTabs": false,
   "semi": true,
