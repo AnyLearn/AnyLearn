@@ -13,7 +13,12 @@
     "test:integration": "start-server-and-test start http-get://localhost:3000 cypress:run",
     "test:integration:watch": "start-server-and-test start http-get://localhost:3000 cypress:open",
     "cypress:run": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "lint": "eslint **/**",
+    "lint:fix": "eslint **/** --fix",
+    "test-test": "NODE_ENV=test jest --passWithNoTests --watch",
+    "test:ci": "NODE_ENV=test jest --passWithNoTests",
+    "type-check": "tsc"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.2.0",
@@ -38,6 +43,8 @@
     "cypress": "^6.2.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript-prettier": "^2.1.0",
     "prettier": "^2.2.1",
     "start-server-and-test": "^1.11.7"
   },
