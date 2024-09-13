@@ -1,0 +1,27 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: anylearn-anylearn
+  namespace: flux-system
+spec:
+  ignore: .gimlet
+  interval: 15s
+  ref:
+    branch: main
+  secretRef:
+    name: deploy-key-anylearn-anylearn
+  url: ssh://git@github.com/AnyLearn/AnyLearn
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: anylearn-anylearn
+  namespace: flux-system
+spec:
+  interval: 24h0m0s
+  path: ./flux
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: anylearn-anylearn

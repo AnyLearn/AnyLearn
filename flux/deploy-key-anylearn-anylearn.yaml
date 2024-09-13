@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: deploy-key-anylearn-anylearn
+  namespace: flux-system
+stringData:
+  identity: |
+    -----BEGIN OPENSSH PRIVATE KEY-----
+    b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtz
+    c2gtZWQyNTUxOQAAACBHahaE68nQQWT8OTeuIUfiuNGWEh8wn6jUgH2/kMv/NgAA
+    AJiX1tSel9bUngAAAAtzc2gtZWQyNTUxOQAAACBHahaE68nQQWT8OTeuIUfiuNGW
+    Eh8wn6jUgH2/kMv/NgAAAEBgFbK8rCOUe3uTln3JA5ZLhN7wlrcieXtz05irNEq9
+    vkdqFoTrydBBZPw5N64hR+K40ZYSHzCfqNSAfb+Qy/82AAAAEGtleWdlbkBnaW1s
+    ZXQuaW8BAgMEBQ==
+    -----END OPENSSH PRIVATE KEY-----
+  identity.pub: |
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEdqFoTrydBBZPw5N64hR+K40ZYSHzCfqNSAfb+Qy/82
+  known_hosts: |
+    github.com ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENjQEezOmxkZMy7opKgwFB9nkt5YRrYMjNuG5N87uRgg6CLrbo5wAdT/y6v0mKV0U2w0WZ2YB/++Tpockg=
