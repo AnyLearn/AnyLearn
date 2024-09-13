@@ -1,0 +1,22 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: anylearn-anylearn
+  namespace: flux-system
+spec:
+  address: https://idp.anylearn.io/api/flux-events?access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjYxOTk5NDgsImlzcyI6IiIsInN1YiI6ImZsdXgtc3RhZ2luZyIsInR5cGUiOiJ1c2VyIn0.BUDjIlWD-zfHE7ZPS7dQfrGn4nBkw7s_9AFEKF8Gcv0&env=staging
+  type: generic
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: anylearn-anylearn
+  namespace: flux-system
+spec:
+  eventSeverity: info
+  eventSources:
+  - kind: Kustomization
+    name: anylearn-anylearn
+    namespace: flux-system
+  providerRef:
+    name: anylearn-anylearn
